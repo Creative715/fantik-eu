@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Tour;
 
 class MainController extends Controller
 {
     public function index()
     {
-        $tours = Tour::all();
-        return view('main', compact('tours'));
+        $tours = Tour::allPaginate(12);
+        return view('app.main', compact('tours'));
     }
 }

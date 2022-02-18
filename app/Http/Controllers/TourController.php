@@ -3,84 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tour;
-use App\Http\Requests\StoreTourRequest;
-use App\Http\Requests\UpdateTourRequest;
+use App\Models\TourGroup;
 
 class TourController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $tours = Tour::allPaginate(24);
+        return view('app.tour.index', compact('tours'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function show($slug)
     {
-        //
+        $tour = Tour::findBySlug($slug);
+        return view('app.tour.tour', compact('tour'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreTourRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreTourRequest $request)
-    {
-        //
+    public function allByGroup(TourGroup $group) {
+        $tours = $group->tours()->findByGroup();
+        return view('app.tour.group', compact('tours'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Tour  $tour
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Tour $tour)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Tour  $tour
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Tour $tour)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateTourRequest  $request
-     * @param  \App\Models\Tour  $tour
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateTourRequest $request, Tour $tour)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Tour  $tour
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Tour $tour)
-    {
-        //
-    }
 }

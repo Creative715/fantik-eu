@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
+use App\Models\State;
 use App\Models\Tour;
 use App\Models\TourGroup;
 use App\Models\User;
@@ -22,7 +24,9 @@ class DatabaseSeeder extends Seeder
         $tour_groups_id = $tour_groups->pluck('id');
 
         $tours->each(function ($tour) use ($tour_groups_id){
-            $tour->tour_groups()->attach(($tour_groups_id->random(10)));
+            $tour->tour_groups()->attach(($tour_groups_id->random(2)));
+            Comment::factory(3)->create(['tour_id' => $tour->id]);
+            State::factory(1)->create(['tour_id' => $tour->id]);
         });
     }
 }

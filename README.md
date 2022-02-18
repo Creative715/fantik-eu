@@ -1,64 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# FANTIK
+## Системные Требования
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+- PHP версии 8.0 и выше
+- MYSQL версии 5.7 и выше
+- NodeJS версии 12 и выше
 
-## About Laravel
+## Установка
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Переименать файл `.env.examle`  в корне проекта в файл `.env`
+команда: cp .env.example .env
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Установить пакеты с помощью [composer](https://getcomposer.org/)
+вызвав команду `composer install` в консоли.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Установить пакеты с помощью [npm](https://www.npmjs.com/)
+вызвав команду `npm install` в консоли.
 
-## Learning Laravel
+Создайть свою базу данных на своем сервере и обновить в файле .env следующие строки:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=fantik
+DB_USERNAME=root
+DB_PASSWORD=
+```
+Сгенерировать ключ безопастности с помощью команды  
+`php artisan key:generate`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Запустить миграции и наполнение базы данных с помощью команды  
+`php artisan migrate --seed`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+После того, как проект установлен, надо запустить команду, чтобы связать общую папку хранилища для
+загрузки файлов:  
+`php artisan storage:link`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Публикация файлов Livewire:  
+`php artisan livewire:publish --assets`
 
-### Premium Partners
+## Разработка
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Попередження:
+Після того як добавились нові "route":
+`php artisan cache:clear`
+`php artisan route:cache`
 
-## Contributing
+Файлы стилей и скриптов создаются с использованием Laravel Mix, который является оболочкой для многих инструментов и
+работает с файлом webpack.mix.js в корне проекта.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+их можно построить с помощью команды:  
+`npm run <command>`
 
-## Code of Conduct
+Доступные команды перечислены в верхней части файла package.json под ключом «scripts».
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Библиотеки и пакеты
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- PHP Фреймворк [Laravel 9](https://laravel.com/)
+- CSS Фреймворк [Bootstrap 5](https://getbootstrap.com/)
+- JS фреймворк [Vue.js](https://vuejs.org/)
+- Используются иконки Font Awesome https://fontawesome.com/

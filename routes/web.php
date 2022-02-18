@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
@@ -16,6 +17,9 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index'])->name('main');
+Route::get('tours', [TourController::class, 'index'])->name('tours');
+Route::get('tour/{slug}', [TourController::class, 'show'])->name('tour.show');
+Route::get('tour/group/{group}', [TourController::class, 'allByGroup'])->name('tour.group');
 
 Auth::routes();
 
