@@ -22,6 +22,9 @@ return new class extends Migration
             $table->longText('content');
             $table->string('slug');
             $table->integer('duration')->default('1');
+            $table->string('img')->nullable();
+            $table->string('carousel')->nullable();
+            $table->string('video')->nullable();
             $table->integer('night')->default(null)->nullable();
             $table->decimal('price', 10, 2)->default('0.00');
             $table->boolean('published')->default(1);

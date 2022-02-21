@@ -7,7 +7,7 @@
 
 ## Установка
 
-Переименать файл `.env.examle`  в корне проекта в файл `.env`
+Переименовать файл `.env.examle`  в корне проекта в файл `.env`
 команда: cp .env.example .env
 
 Установить пакеты с помощью [composer](https://getcomposer.org/)
@@ -36,8 +36,6 @@ DB_PASSWORD=
 загрузки файлов:  
 `php artisan storage:link`
 
-Публикация файлов Livewire:  
-`php artisan livewire:publish --assets`
 
 ## Разработка
 

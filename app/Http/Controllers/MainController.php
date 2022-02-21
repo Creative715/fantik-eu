@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tour;
+use App\Models\TourGroup;
 
 class MainController extends Controller
 {
@@ -11,4 +12,5 @@ class MainController extends Controller
         $tours = Tour::allPaginate(12);
         return view('app.main', compact('tours'));
     }
+
 }

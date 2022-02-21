@@ -3,13 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">About</h4>
-                    <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    <h4 class="text-white">About US</h4>
+                    <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates rerum ex dolor corrupti commodi, vero amet est quaerat porro fugit? Accusantium nemo dignissimos natus. Fugit exercitationem ut dicta animi aspernatur?</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Contact</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="#" class="text-white">Follow US on Twitter</a></li>
+                        <li><a href="#" class="text-white">Follow on Instagram</a></li>
                         <li><a href="#" class="text-white">Like on Facebook</a></li>
                         <li><a href="#" class="text-white">Email</a></li>
                     </ul>
@@ -30,8 +31,8 @@
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">Album example</h1>
-                <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                <h1 class="fw-light">Abut US</h1>
+                <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus enim sint incidunt cumque delectus animi quis repellat iusto odio asperiores, sapiente aut, deserunt in est saepe vero ipsum eveniet voluptatum.</p>
                 <p>
                     <a href="#" class="btn btn-primary my-2">Main call to action</a>
                     <a href="#" class="btn btn-secondary my-2">Secondary action</a>

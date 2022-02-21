@@ -6,10 +6,10 @@
 
   <hr />
 
-  <form enctype="multipart/form-data" action="{{ route('admin.post.store') }}" method="post">
+  <form enctype="multipart/form-data" action="{{ route('admin.tour.store') }}" method="post">
    @csrf
     {{-- Form include --}}
-    @include('admin.posts.partials.form')
+    @include('admin.tour.partials.form')
 
   </form>
 </div>

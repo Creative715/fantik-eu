@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Panel | Switrainer</title>
+  <title>Admin Panel | Fantik</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -81,7 +81,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{ asset('dashboard/img/swimtrainer-user.jpg') }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('dashboard/img/fantik-user.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block"> {{ Auth::user()->name }}</a>
@@ -109,21 +109,21 @@
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-copy"></i>
               <p>
-                Редагування
+                Edit
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('admin.post.index')}}" class="nav-link">
+                <a href="{{ route('admin.tour.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Товари</p>
+                  <p>Tours</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.page.index')}}" class="nav-link">
+                <a href="{{ route('admin.tour-group.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Стоірнки</p>
+                  <p>Tour Groups</p>
                 </a>
               </li>
             </ul>
@@ -133,17 +133,17 @@
             <a target="_blanck" href="{{ ('/') }}" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
               <p>
-                Переглянути сайт
+               View Site
               </p>
             </a>
           </li>
 <li class="nav-item">
 
-        <a class="nav-link" href="{{ ('/logout') }}"
+        <a class="nav-link" href="{{ ('logout') }}"
            onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
                          <i class="fas fa-sign-out-alt"></i>
-            <p>{{ __('Вихід') }}</p>
+            <p>{{ __('Logout') }}</p>
         </a>
 
         <form id="logout-form" action="{{ ('/logout') }}" method="POST" style="display: none;">
@@ -185,7 +185,7 @@
     <div class="float-right d-none d-sm-block">
       <b><a target="_blanck" href="{{ ('/') }}">View Site</a></b>
     </div>
-    <strong>© <?= date('Y') ?> Switrainer Admin Panel </strong>
+    <strong>© <?= date('Y') ?> Fantik-EU Admin Panel </strong>
   </footer>
 
   <!-- Control Sidebar -->

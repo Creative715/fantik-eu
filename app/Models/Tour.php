@@ -35,7 +35,7 @@ class Tour extends Model
 
     public function tour_groups()
     {
-        return $this->belongsToMany(TourGroup::class);
+        return $this->belongsToMany(TourGroup::class, 'tour_tour_group');
     }
 
     public function comments()
