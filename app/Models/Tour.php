@@ -12,6 +12,10 @@ class Tour extends Model
 
     protected $guarded = [];
 
+    public function setSlugAttribute($value) {
+        $this->attributes['slug'] = Str::slug( mb_substr($this->title, 0, 140) . "-" );
+    }
+
     public function getContentPreview(){
         return Str::limit($this->content, 100);
     }

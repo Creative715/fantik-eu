@@ -38,7 +38,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" target="_blanck" href="{{url('/')}}">View Site</a>
+                            <a class="nav-link" target="_blank" href="{{url('/')}}">View Site</a>
                           </li>
                         <!-- Authentication Links -->
                         @guest

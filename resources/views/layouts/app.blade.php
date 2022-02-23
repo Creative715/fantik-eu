@@ -112,5 +112,8 @@
     </main>
     @include('app.includes.footer')
 </div>
+@section('vue')
+    <script src="{{ mix('/js/app.js') }}"></script>
+@endsection
 </body>
 </html>
